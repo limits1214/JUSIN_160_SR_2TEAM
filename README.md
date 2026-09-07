@@ -22,6 +22,10 @@
 | 제작 범위 | Engine · SRClient · Map/Debug Tools |
 | 기술 스택 | • C++17<br>• DirectX 9 · DirectInput 8<br>• FMOD · Assimp 6.0.4 · Spine C++ 4.0<br>• Dear ImGui 1.83 · ImGuizmo<br>• nlohmann/json · Tweeny |
 
+## 시연영상
+
+[시연영상 보기](https://youtu.be/my8iDHUOXAk)
+
 ## 주요 콘텐츠
 
 - 선박 준비 → 수중 탐험·어획 → 귀환·정산 → 초밥집 운영으로 이어지는 플레이 루프
