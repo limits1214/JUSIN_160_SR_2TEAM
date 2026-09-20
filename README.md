@@ -108,3 +108,38 @@
     </tr>
   </tbody>
 </table>
+
+## 리소스 다운로드 및 배치
+
+게임 실행에 필요한 리소스는 소스 저장소와 별도로 배포합니다.
+
+[게임 리소스 다운로드 (Google Drive)](https://drive.google.com/file/d/17JBcH_S6cSq9asAD7uwa4drjswg-tK7D/view?usp=drive_link)
+
+1. 위 링크에서 리소스 압축 파일을 다운로드하고 압축을 풉니다.
+2. 프로젝트의 `SRClient/Bin` 아래에 `Resource` 폴더를 만듭니다.
+3. 압축 안의 `SRClientCurrent` **내부에 있는 여섯 폴더**를 `SRClient/Bin/Resource` 아래에 복사합니다. 기존 리소스가 있다면 먼저 백업해 주세요.
+
+최종 폴더 구조는 다음과 같습니다.
+
+```text
+JUSIN_160_SR_2TEAM/
+└─ SRClient/
+   └─ Bin/
+      ├─ SRClient.exe        # 빌드 후 생성
+      └─ Resource/
+         ├─ Data/
+         ├─ Font/
+         ├─ Glb/
+         ├─ Sound/
+         ├─ Spine/
+         └─ Texture/
+```
+
+- 폴더 이름은 `Resources`가 아닌 **`Resource`**입니다.
+- `Resource/SRClientCurrent/Texture`처럼 폴더가 한 단계 더 들어가지 않도록 주의해 주세요. `Resource/Texture`가 되어야 합니다.
+- Spine 리소스의 `.atlas.txt`, `.skel.bytes`, 텍스처 파일은 폴더 구조를 유지한 채 함께 복사합니다.
+- 심볼릭 링크나 관리자 권한은 필요하지 않습니다. `Bin`은 Git 추적 대상에서 제외되어 있으므로 리소스도 커밋되지 않습니다.
+
+배치 후 `JUSIN_160_SR_2TEAM.sln`을 열고 **Debug | x64**로 빌드한 다음, **SRClient**를 시작 프로젝트로 설정해 실행합니다. 이미 빌드되어 있다면 `SRClient/Bin/SRClient.exe`를 실행하면 됩니다.
+
+> 위 다운로드는 게임 리소스용이며 FMOD 라이브러리는 포함하지 않습니다. 소스에서 빌드하려면 **FMOD 2.02.19 x64**의 `fmod_vc.lib`와 `fmod.dll`을 별도로 `Engine/ThirdParty/fmod/lib/x64`에 배치해야 합니다. `fmod.dll`은 빌드 시 `CopySR.bat`에서 `SRClient/Bin`으로 복사합니다.
