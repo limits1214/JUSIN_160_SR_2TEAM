@@ -145,5 +145,3 @@ JUSIN_160_SR_2TEAM/
 - 심볼릭 링크나 관리자 권한은 필요하지 않습니다. `Bin`은 Git 추적 대상에서 제외되어 있으므로 리소스도 커밋되지 않습니다.
 
 배치 후 `JUSIN_160_SR_2TEAM.sln`을 열고 **Debug | x64**로 빌드한 다음, **SRClient**를 시작 프로젝트로 설정해 실행합니다. 이미 빌드되어 있다면 `SRClient/Bin/SRClient.exe`를 실행하면 됩니다.
-
-FMOD 라이브러리 경로는 `Engine/ThirdParty/fmod/lib/x64`입니다. 현재 프로젝트는 `fmod_vc.lib`와 `fmod.dll`을 사용하며, 빌드 시 `CopySR.bat`이 `fmod.dll`을 `SRClient/Bin`으로 복사합니다.
