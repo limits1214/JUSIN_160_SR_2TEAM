@@ -146,4 +146,4 @@ JUSIN_160_SR_2TEAM/
 
 배치 후 `JUSIN_160_SR_2TEAM.sln`을 열고 **Debug | x64**로 빌드한 다음, **SRClient**를 시작 프로젝트로 설정해 실행합니다. 이미 빌드되어 있다면 `SRClient/Bin/SRClient.exe`를 실행하면 됩니다.
 
-> 위 다운로드는 게임 리소스용이며 FMOD 라이브러리는 포함하지 않습니다. 소스에서 빌드하려면 **FMOD 2.02.19 x64**의 `fmod_vc.lib`와 `fmod.dll`을 별도로 `Engine/ThirdParty/fmod/lib/x64`에 배치해야 합니다. `fmod.dll`은 빌드 시 `CopySR.bat`에서 `SRClient/Bin`으로 복사합니다.
+**FMOD 2.02.19 x64 라이브러리는 Git 저장소에 포함되어 있어 별도로 다운로드하거나 배치할 필요가 없습니다.** `Engine/ThirdParty/fmod/lib/x64`에 일반 버전(`fmod.dll`, `fmod_vc.lib`)과 로깅 버전(`fmodL.dll`, `fmodL_vc.lib`)을 함께 보관합니다. 현재 프로젝트는 일반 버전을 사용하며, 빌드 시 `CopySR.bat`에서 `fmod.dll`을 `SRClient/Bin`으로 자동 복사합니다.

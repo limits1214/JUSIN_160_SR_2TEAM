@@ -7,4 +7,5 @@ x64/
 
 imgui.ini
 
-/Engine/ThirdParty/fmod/lib
+# Keep FMOD libraries even though build output folders named x64 are ignored.
+!/Engine/ThirdParty/fmod/lib/x64/
